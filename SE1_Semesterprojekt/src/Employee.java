@@ -6,7 +6,7 @@ public class Employee {
 	private LocalDateTime ShiftStart = LocalDateTime.of(2020, 01, 01, 00, 01);
 	private int Shift = 8;
 	private double minimumWage = 9.35;
-	public String name = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:ms"));
+	private String name = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:ms"));
 	
 	public Employee(String n, double mW, LocalDateTime start, int shift) {
 		name = n;
