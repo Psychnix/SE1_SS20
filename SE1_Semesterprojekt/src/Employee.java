@@ -1,19 +1,26 @@
-//import java.util.*;
 //import java.lang.Object;
 import java.time.*;
+import java.util.Random;
 import java.time.format.DateTimeFormatter;
 public class Employee {
 	private LocalDateTime ShiftStart = LocalDateTime.of(2020, 01, 01, 00, 01);
 	private int Shift = 8;
 	private double minimumWage = 9.35;
+	public String name = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:ms"));
 	
-	public Employee(LocalDateTime start, int shift, double mW) {
+	public Employee(String n, double mW, LocalDateTime start, int shift) {
+		name = n;
+		minimumWage = mW;
 		ShiftStart = start;
 		Shift = shift;
-		minimumWage = mW;
+		
 	}
 	
-/* ## get() ## */
+/* BEGIN ## get() ##*/
+	public String getName() {
+		return name;
+	}
+	
 	public LocalDateTime getShiftStart() {
 		return ShiftStart;
 	}
@@ -33,22 +40,25 @@ public class Employee {
 	public double getSalery() {
 		return (Shift*minimumWage);
 	}
+/* END ## get() ##*/
 	
-/* ## set() ## */
+	
+/* BEGIN ## set() ## */
+	public String setName(String n) {
+		return name = n;
+	}
+	
 	public LocalDateTime setShiftStart(LocalDateTime s) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-		ShiftStart = LocalDateTime.parse(s.format(formatter), formatter); //s.format(formatter);
-		return ShiftStart;
+		return ShiftStart = LocalDateTime.parse(s.format(formatter), formatter); //s.format(formatter);
 	}
 	
 	public int setShift(int s) {
-		Shift = s;
-		return Shift;
+		return Shift = s;
 	}
 	
 	public double setMinimumWage(double mW) {
-		minimumWage = mW;
-		return minimumWage;
+		return minimumWage = mW;
 	}
-		
+/* END ## set() ## */
 }
