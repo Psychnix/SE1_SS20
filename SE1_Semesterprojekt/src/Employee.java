@@ -13,7 +13,6 @@ public class Employee {
 		minimumWage = mW;
 		ShiftStart = start;
 		Shift = shift;
-		
 	}
 	
 /* BEGIN ## get() ##*/

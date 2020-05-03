@@ -6,7 +6,9 @@ public class ParkingGarage {
 	public Employee[] employers;
 /* ## END Variablen Deklaration ## */
 	
-
+public ParkingGarage() {
+	
+}
 	
 /* BEGIN ## Funktionen ## */
 	public static int getRandNumInRange(int min, int max) {
