@@ -30,13 +30,19 @@ class FirstTests {
 			assertEquals(1, result);
 			result = spot.avaiableParkingSpots();
 			assertEquals(25, result);
-			spot.raiseFullSpots();
-			spot.raiseFullSpots();
+			int z = spot.raiseFullSpots();
+			z = spot.raiseFullSpots();
 			result = spot.avaiableParkingSpots();
 			assertEquals(23, result);
-			spot.lowerFullSpots();
+			z =spot.lowerFullSpots();
 			result = spot.avaiableParkingSpots();
 			assertEquals(24, result);
+		}
+		//test for the class Employee
+		@Test 
+		void test_Employee() {
+			Employee spot = new Employee();
+			
 		}
 
 }
