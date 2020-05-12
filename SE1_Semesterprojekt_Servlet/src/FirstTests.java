@@ -14,8 +14,9 @@ class FirstTests {
 			ParkingTicket tickets = new ParkingTicket();
 			String s[] = {"enter","1","1589296779644","_","_","7afde8d3cf5da95184ed98203bb74a55","#e85991","10"};
 			tickets.newEnter(s);
-			String result = tickets.getTicket("1");
-			assertEquals(s, result);
+			String s2[]= {"1","7afde8d3cf5da95184ed98203bb74a55","1589296779644","_","_","#e85991"};
+			String[] result = tickets.getTicket("1");
+			assertEquals(s2, result);
 		}
 		//test for the class ParkingSpot
 		@Test 
