@@ -12,6 +12,8 @@
 /**/import java.util.Scanner;
 /**/import java.util.regex.Pattern;
 /**/import java.time.*;
+import java.util.HashMap;
+import java.util.Map;
 /**/import java.util.Random;
 /*### END Imports ###*/
 
@@ -26,6 +28,7 @@ public class ParkingGarage extends HttpServlet
 	private double sum = 0;
 	private int numberOfCars = 0;
 	private int parkingTime = 0;
+	PrakingTicket tickets = New ParkingTicket;
 /* ## END Variablen Deklaration ## */	
 	
 	
@@ -53,8 +56,10 @@ public class ParkingGarage extends HttpServlet
 		{
 			sum = sum+Double.valueOf(splitbody[4]);
 			parkingTime += Integer.valueOf(splitbody[3]);
+			tickets.newLeave(splitbody);
 		} else if (splitbody[0].equals("enter")) {
 			numberOfCars = Integer.valueOf(splitbody[1]);
+			tickets.newEnter(splitbody);
 		}
 		System.out.println(body);
 		System.out.println(sum);
