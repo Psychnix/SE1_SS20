@@ -28,6 +28,10 @@ public class ParkingTicket {
 		tickets[Integer.valueOf(splitBody[1])][5] = splitBody[6];
 	}
 	
+	public String[] getTicket(String enterNumber) {
+		return tickets[Integer.valueOf(enterNumber)];
+	}
+	
 	private static String[][] expandArray(){
 		String[][]temp = new String[tickets.length*2][6];
 		
