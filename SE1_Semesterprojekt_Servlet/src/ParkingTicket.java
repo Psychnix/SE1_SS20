@@ -4,13 +4,14 @@ public class ParkingTicket {
 	private static int ticketNumber = 0;
 	private static int ticketCategorie = 0;
     private static LocalDateTime ticketTime;
-    private static String[][] tickets = new String[1][6];
+    private static String[][] tickets = new String[2][6];
 	
 	public void newEnter(String[] splitBody) {
-		if(Integer.valueOf(splitBody[1]) > tickets.length) {
+		if(Integer.valueOf(splitBody[1]) > tickets.length-1) {
 			expandArray();
 		}
 		//Enter-Nummer
+		System.out.println(splitBody[1]);
 		tickets[Integer.valueOf(splitBody[1])][0] = splitBody[1];
 		//Ticket-ID
 		tickets[Integer.valueOf(splitBody[1])][1] = splitBody[5];
