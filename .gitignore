@@ -84,7 +84,16 @@ local.properties
 
 # Tomcat 8.5
 Servers/
+Servers/Tomcat v8.5 Server at localhost-config/server.xml
+Servers/Tomcat v8.5 Server at localhost-config/web.xml
+Servers/Tomcat v8.5 Server at localhost-config/context.xml
 Servers2/
+Servers2/Tomcat v8.5 Server at localhost-config/server.xml
+Servers2/Tomcat v8.5 Server at localhost-config/web.xml
+Servers2/Tomcat v8.5 Server at localhost-config/context.xml
+
+# SE1_Semesterprojekt_Servlet
+SE1_Semesterprojekt_Servlet/.classpath
 
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
