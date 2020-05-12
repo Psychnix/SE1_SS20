@@ -50,8 +50,9 @@ public class ParkingGarage
 		if(splitbody[0].equals("leave"))
 		{
 			sum = sum+Double.valueOf(splitbody[4]);
+			parkingTime += Integer.valueOf(splitbody[3]);
+		} else if (splitbody[0].equals("enter")) {
 			numberOfCars = Integer.valueOf(splitbody[1]);
-			parkingTime = Integer.valueOf(splitbody[3]);
 		}
 		System.out.println(body);
 		System.out.println(sum);
