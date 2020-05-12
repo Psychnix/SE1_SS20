@@ -28,7 +28,7 @@ public class ParkingGarage extends HttpServlet
 	private double sum = 0;
 	private int numberOfCars = 0;
 	private int parkingTime = 0;
-	PrakingTicket tickets = New ParkingTicket;
+	ParkingTicket tickets = new ParkingTicket();
 /* ## END Variablen Deklaration ## */	
 	
 	

@@ -6,7 +6,7 @@ public class ParkingTicket {
     private static LocalDateTime ticketTime;
     private static String[][] tickets = new String[1][6];
 	
-	public static void newEnter(String[] splitBody) {
+	public void newEnter(String[] splitBody) {
 		if(Integer.valueOf(splitBody[1]) > tickets.length) {
 			expandArray();
 		}
@@ -18,7 +18,7 @@ public class ParkingTicket {
 		tickets[Integer.valueOf(splitBody[1])][2] = splitBody[2];
 	}
 	
-	public static void newLeave(String[] splitBody) {
+	public void newLeave(String[] splitBody) {
 		//Aufenthaltsdauer
 		tickets[Integer.valueOf(splitBody[1])][3] = splitBody[3];
 		//Preis
