@@ -56,6 +56,7 @@ public class ParkingGarage extends HttpServlet
 		{
 			sum = sum+Double.valueOf(splitbody[4]);
 			parkingTime += Integer.valueOf(splitbody[3]);
+			tickets.newLeave(splitbody);
 		} else if (splitbody[0].equals("enter")) {
 			numberOfCars = Integer.valueOf(splitbody[1]);
 			tickets.newEnter(splitbody);
