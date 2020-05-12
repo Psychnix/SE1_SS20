@@ -17,6 +17,8 @@ public class ParkingTicket {
 		tickets[Integer.valueOf(splitBody[1])][1] = splitBody[5];
 		//Datum & Uhrzeit
 		tickets[Integer.valueOf(splitBody[1])][2] = splitBody[2];
+		//Fahrzeugfarbe
+		tickets[Integer.valueOf(splitBody[1])][5] = splitBody[6];
 	}
 	
 	public void newLeave(String[] splitBody) {
@@ -24,8 +26,6 @@ public class ParkingTicket {
 		tickets[Integer.valueOf(splitBody[1])][3] = splitBody[3];
 		//Preis
 		tickets[Integer.valueOf(splitBody[1])][4] = splitBody[4];
-		//Fahrzeugfarbe
-		tickets[Integer.valueOf(splitBody[1])][5] = splitBody[6];
 	}
 	
 	public String[] getTicket(String enterNumber) {
