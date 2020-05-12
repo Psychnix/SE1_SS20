@@ -17,8 +17,10 @@
 
 
 @WebServlet("/ParkingGarage")
-public class ParkingGarage 
+public class ParkingGarage extends HttpServlet
 {
+	
+	private static final long serialVersionUID = 1L;
 /* ## BEGIN Variablen Deklaration ## */
 	public Employee[] employers;
 	private double sum = 0;
