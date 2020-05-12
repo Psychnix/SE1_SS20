@@ -7,8 +7,16 @@ import org.junit.jupiter.api.Test;
 
 class FirstTests {
 
-	//test for the calss Parking Ticket 
-
+	//test for the calss Parking Ticket
+		@Test 
+		void test_ParkingTicket() {
+			
+			ParkingTicket tickets = new ParkingTicket();
+			String s[] = {"enter","1","1589296779644","_","_","7afde8d3cf5da95184ed98203bb74a55","#e85991","10"};
+			tickets.newEnter(s);
+			String result = tickets.getTicket("1");
+			assertEquals(s, result);
+		}
 		//test for the class ParkingSpot
 		@Test 
 		void test_ParkingSpot() {
