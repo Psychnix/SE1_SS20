@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 class FirstTests {
 
-	//test for the calss Parking Ticket
+	//test for the class Parking Ticket
 		@Test 
 		void test_ParkingTicket() {
 			
